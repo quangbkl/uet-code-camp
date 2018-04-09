@@ -1,0 +1,28 @@
+.Todo_Header {
+    background-color: olivedrab;
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    margin: 0px;
+}
+.Todo_Header h1 {
+    color: white;
+}
+
+input {
+    width: 400px;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    width: 150px;
+    background: none;
+    cursor: pointer;
+    border: solid 2px red;
+    color: white;
+}
+
+button:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+}
