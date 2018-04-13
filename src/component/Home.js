@@ -3,6 +3,7 @@ import Header from "../Todos/Header";
 import TodoList from "../Todos/TodoList";
 import {createTodo, deleteTodo, fetchTodos, toggleTodo} from "../services/APIAjax";
 import '../css/Todo.css';
+import {Redirect} from "react-router-dom";
 
 class Home extends Component {
     constructor(props) {
@@ -66,6 +67,10 @@ class Home extends Component {
             onChangeInput: this.onChangeInput,
             onClickRemove: this.onClickRemove,
             handleToggle: this.handleToggle
+        }
+        const {auth} = this.props;
+        if (!auth) {
+            return (<Redirect to="/Login"/>);
         }
         return (
             <div className="app">
